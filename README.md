@@ -106,7 +106,7 @@ Request Body:
 
 ```json
 {
-  "query": "What is the punishment for theft in Malaysian law?",
+  "query": "What is the Employment Act 1955?",
   "top_k": 3
 }
 ```

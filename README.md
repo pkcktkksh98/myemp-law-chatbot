@@ -42,8 +42,8 @@ project/
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/yourusername/malaysian-law-chatbot.git
-cd malaysian-law-chatbot
+git clone https://github.com/pkcktkksh98/myemp-law-chatbot.git
+cd myemp-law-chatbot
 ```
 
 ### 2. Create Virtual Environment
@@ -76,8 +76,8 @@ rag_pipeline(documents)
 ---
 ### 5. Download GGUF Model (e.g., OpenChat-3.5)
 
-- Download from: https://huggingface.co/TheBloke/OpenChat-3.5-GGUF
-- Recommended: `openchat-3.5-0106.Q5_K_M.gguf`
+- Download from: [TheBloke/openchat-3.5-0106-GGUF](https://huggingface.co/TheBloke/openchat-3.5-0106-GGUF)
+- Recommended: [`openchat-3.5-0106.Q5_K_M.gguf`](https://huggingface.co/TheBloke/openchat-3.5-0106-GGUF/blob/main/openchat-3.5-0106.Q5_K_M.gguf)
 - Place the file in the root as `model.gguf`
 
 ---

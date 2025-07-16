@@ -1,11 +1,20 @@
 # 🇲🇾 Malaysian Law RAG Chatbot (Local LLM)
 
-A local Retrieval-Augmented Generation (RAG) chatbot to answer Malaysian law-related questions using:
+A local Retrieval-Augmented Generation (RAG) chatbot that answers legal questions based on:
 
-- 🧠 FAISS + Sentence Transformers for document retrieval
-- 🔍 `llama-cpp-python` for local LLM inference (OpenChat model)
-- ⚡ FastAPI backend for inference
-- 💬 Streamlit frontend UI
+- 📘 **Employment Act 1955 (Act 265)** — Reprint as at 1 August 2023  
+- 📕 **Employment (Amendment) Act 2022 (Act A1651)**
+
+---
+
+## 🧠 Architecture
+
+This chatbot uses:
+
+- **FAISS** + **Sentence Transformers** to retrieve relevant law sections  
+- **Local LLM** via `llama-cpp-python` for offline inference (e.g., OpenChat GGUF)  
+- **FastAPI** as backend API  
+- **Streamlit** as the user interface
 
 ---
 
@@ -51,8 +60,21 @@ source venv/bin/activate  # macOS/Linux
 ```bash
 pip install -r requirements.txt
 ```
+## 📚 Run `rag_pipeline()`
 
-### 4. Download GGUF Model (e.g., OpenChat-3.5)
+### 4. Build Vector Store with FAISS
+
+```python
+from backend.rag_pipeline import rag_pipeline
+rag_pipeline(documents)
+```
+
+✅ This creates:
+- `vector_store/faiss.index`
+- `vector_store/metadata.pkl`
+
+---
+### 5. Download GGUF Model (e.g., OpenChat-3.5)
 
 - Download from: https://huggingface.co/TheBloke/OpenChat-3.5-GGUF
 - Recommended: `openchat-3.5-0106.Q5_K_M.gguf`

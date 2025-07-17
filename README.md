@@ -65,8 +65,7 @@ pip install -r requirements.txt
 ### 4. Build Vector Store with FAISS
 
 ```python
-from backend.rag_pipeline import rag_pipeline
-rag_pipeline(documents)
+python backend/rag_pipeline.py
 ```
 
 ✅ This creates:
